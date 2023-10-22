@@ -1,0 +1,18 @@
+MariaDB [olshop]> create table data_user( user varchar(100) primary key, password varchar(100) );
+Query OK, 0 rows affected (0.062 sec)
+
+MariaDB [olshop]> create table data_produk( id_produk int auto_increment primary key, password varchar(100) );
+Query OK, 0 rows affected (0.049 sec)
+
+MariaDB [olshop]> drop table data_produk
+    -> ;
+Query OK, 0 rows affected (0.021 sec)
+
+MariaDB [olshop]> create table data_produk( id_produk int auto_increment primary key, nama varchar(100), harga int, kuantitas int);
+Query OK, 0 rows affected (0.051 sec)
+
+MariaDB [olshop]> create table data_transaksi( id_transaksi int auto_increment primary key, user varchar(100), total_item int, total_harga int, waktu varchar(100)  );
+Query OK, 0 rows affected (0.054 sec)
+
+MariaDB [olshop]> create table data_transaksi_produk( id_transaksi_produk int auto_increment primary key, id_transaksi int, id_produk int, jumlah_item int );
+Query OK, 0 rows affected (0.044 sec)
